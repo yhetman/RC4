@@ -38,8 +38,6 @@ encryption(const char *input, const char  *fkey, const char *output)
     long 			fsize,
     				klength;
 	FILE 			*f;
-	int  			i;
-
 
     f = fopen (input,"rb");
     plain_data = reading(f, &fsize);
