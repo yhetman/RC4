@@ -19,4 +19,6 @@
 # include <unistd.h>
 # include <stdbool.h>
 
+
+void	encryption(const char *input, const char  *fkey, const char *output);
 #endif
