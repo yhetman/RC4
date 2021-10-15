@@ -70,8 +70,8 @@ main(int argc, char **argv)
 
 	if (encrypt)
 		encryption(input, key, output);
-	else
-		decryption(input, key, output);
+	// else
+	// 	decryption(input, key, output);
 	
 
 	return 0;

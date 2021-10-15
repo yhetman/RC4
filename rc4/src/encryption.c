@@ -13,10 +13,20 @@
 #include "rc4.h"
 
 unsigned char
-*reading(FILE *file, long filesize)
+*reading(FILE *file, long *filesize)
 {
-	if (file && filesize > 0)
-		return ;
+	unsigned char	*info;
+	long 			i;
+
+	fseek(file, 0, 2);
+	i = ftell(file);
+	*filesize = i;
+	fseek(file, 0, 0);
+	info = (unsigned char *) calloc(*filesize + 10, sizeof(unsigned char));
+    memset(info, 0 ,*filesize + 10);
+    fread(info, 1 ,*filesize , file);
+    fclose (file);
+    return info;
 }
 
 void
