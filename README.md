@@ -1,2 +1,2 @@
-# rc4-salsa20
-Implementation of two stream ciphers.
+# RC4
+Implementation of stream cipher RC4
