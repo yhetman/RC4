@@ -16,6 +16,7 @@ static void
 usage()
 {
 	printf("Usage:\n ./rc4 -i /path/input -o /path/output -k /path/key -e | -d\n");
+	exit(1);
 }
 
 
@@ -47,7 +48,7 @@ get_flags(int argc, char **argv, char **input, char **key, char **output, bool *
 			
 			case 'h':
 				usage();
-				return -1;
+				// return -1;
 		}
 	}
 	return 0;
@@ -70,8 +71,8 @@ main(int argc, char **argv)
 
 	if (encrypt)
 		encryption(input, key, output);
-	// else
-	// 	decryption(input, key, output);
+	else
+	 	decryption(input, key, output);
 	
 
 	return 0;

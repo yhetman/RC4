@@ -52,7 +52,7 @@ encryption(const char *input, const char  *fkey, const char *output)
         exit(1);
     }
     
-    //rc4(plain_data, fsize - 1, key, klength, cyphered);
+    rc4(plain_data, fsize - 1, key, klength, cyphered);
     
     f = fopen(output, "w");
     fwrite(cyphered, 1, fsize, f);

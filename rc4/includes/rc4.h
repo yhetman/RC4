@@ -20,5 +20,9 @@
 # include <stdbool.h>
 
 
-void	encryption(const char *input, const char  *fkey, const char *output);
+void			encryption(const char *input, const char  *fkey, const char *output);
+void			rc4(unsigned char *input, long ilength, unsigned char *key, \
+				long klength, unsigned char* output);
+unsigned char 	*reading(FILE *file, long *filesize);
+
 #endif
