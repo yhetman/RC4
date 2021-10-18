@@ -24,7 +24,7 @@ decryption(const char *input, const char  *fkey, const char *output)
     FILE            *f;
 
     
-    FILE * f = fopen (input,"rb");
+    f = fopen (input,"rb");
     cyphered = reading(f,&fsize);
 
     plain_data = (unsigned char *) calloc(fsize + 10,sizeof(unsigned char));
@@ -38,7 +38,7 @@ decryption(const char *input, const char  *fkey, const char *output)
         exit(1);
     }
 
-    RC4(cyphered, fsize - 1, key, klength, plain_data);
+    rc4(cyphered, fsize - 1, key, klength, plain_data);
   
     f = fopen(output, "w");
     fwrite(plain_data, 1, fsize, f);

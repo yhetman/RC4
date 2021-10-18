@@ -11,7 +11,7 @@
 #* ************************************************************************** *#
 
 
-SRCS = main.c encryption.c rc4.c
+SRCS = main.c encryption.c rc4.c decryption.c
 
 SRCS_DIR = src/
 
